@@ -16,8 +16,7 @@ export class IncidencesList {
   totalRegisters = 0;
   totalPages = 1;
   filterName = '';
-  filterDateFrom: string = '';
-  filterDateTo: string = '';
+  filterStatus: string = '';
 
   deleteIncidence(id: number) {
     if (confirm('¿Seguro que deseas eliminar esta incidencia?')) {
@@ -30,12 +29,23 @@ export class IncidencesList {
   constructor(private incidenceService: IncidencesService, private router: Router) {}
 
   ngOnInit(): void {
+    const saved = localStorage.getItem('incidencesFilters');
+    if (saved) {
+      const filters = JSON.parse(saved);
+      this.filterName = filters.filterName || '';
+      this.filterStatus = filters.filterStatus || '';
+      this.page = filters.page || 1;
+    }
     this.loadAllIncidences();
   }
 
   loadAllIncidences() {
-    this.incidenceService.getIncidences(this.page, this.pageSize, this.filterName.trim() || undefined).subscribe(result => {
-      // Si la API devuelve un array simple (caso error o compatibilidad), adaptamos
+    this.incidenceService.getIncidences(
+      this.page,
+      this.pageSize,
+      this.filterName.trim() || undefined,
+      this.filterStatus || undefined
+    ).subscribe(result => {
       if (Array.isArray(result)) {
         this.incidences = result;
         this.totalRegisters = result.length;
@@ -97,6 +107,11 @@ export class IncidencesList {
 
   // Eliminadas funciones duplicadas y referencias a refresh
   viewDetail(id: number) {
+    localStorage.setItem('incidencesFilters', JSON.stringify({
+      filterName: this.filterName,
+      filterStatus: this.filterStatus,
+      page: this.page
+    }));
     this.router.navigate(['/incidencia', id]);
   }
 }

@@ -26,7 +26,7 @@ namespace SistemaAPI.Controllers
         // GET: api/Incidences
         [HttpGet]
         public async Task<ActionResult<IEnumerable<IncidenciaDto>>> GetIncidences(
-            int page = 1, int pageSize = 10, string? nameClient = null)
+            int page = 1, int pageSize = 10, string? nameClient = null, string? status = null)
         {
             try
             {
@@ -37,6 +37,25 @@ namespace SistemaAPI.Controllers
                 if (!string.IsNullOrWhiteSpace(nameClient))
                 {
                     query = query.Where(i => i.NameClient.Contains(nameClient));
+                }
+                if (!string.IsNullOrWhiteSpace(status))
+                {
+                    var statusLower = status.Trim().ToLower();
+                    IncidentStatus statusEnum;
+                    if (Enum.TryParse<IncidentStatus>(status, true, out statusEnum))
+                    {
+                        query = query.Where(i => i.Status == statusEnum);
+                    }
+                    else
+                    {
+                        // Traducción manual para español
+                        if (statusLower == "reportado") statusEnum = IncidentStatus.Reported;
+                        else if (statusLower == "en progreso") statusEnum = IncidentStatus.InProgress;
+                        else if (statusLower == "resuelto") statusEnum = IncidentStatus.Resolved;
+                        else if (statusLower == "cerrado") statusEnum = IncidentStatus.Closed;
+                        else statusEnum = IncidentStatus.Reported; // Valor por defecto
+                        query = query.Where(i => i.Status == statusEnum);
+                    }
                 }
 
                 var total = await query.CountAsync();

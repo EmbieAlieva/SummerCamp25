@@ -23,14 +23,16 @@ export class IncidencesService {
 
   constructor(private http: HttpClient) {}
 
-  getIncidences(page: number, pageSize: number, nameClient?: string): Observable<IncidencesPage> {
+  getIncidences(page: number, pageSize: number, nameClient?: string, status?: string): Observable<IncidencesPage> {
     let params = new HttpParams()
       .set('page', page)
       .set('pageSize', pageSize);
     if (nameClient) {
       params = params.set('nameClient', nameClient);
     }
-    // Espera que la API devuelva { data: Incidence[], total: number }
+    if (status) {
+      params = params.set('status', status);
+    }
     return this.http.get<{ data: Incidence[], total: number }>(this.apiUrl, { params });
   }
 
