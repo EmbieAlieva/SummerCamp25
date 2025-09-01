@@ -51,7 +51,7 @@ internal class Program
         Console.WriteLine("        jgs      ;:    ;");
 
 
-        string numStr = "";
+        String numStr = "";
         int num = -1;
         bool esValorValido = true;
 
