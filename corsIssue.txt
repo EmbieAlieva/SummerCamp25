@@ -1,0 +1,14 @@
+formatea el formulario de forma adecuada con bootsrap, sigue las tecnicas habituales
+
+
+
+var corsPolicyName = "AllowAngular";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name : corsPolicyName, policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});

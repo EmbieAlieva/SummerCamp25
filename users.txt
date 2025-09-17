@@ -1,0 +1,22 @@
+11	NIE	10000011B	Users11	Apellidos11	usuarios11@mail.com	Passw0rd!11111	Client	19/08/2025 11:26:58	10/09/2025 8:17:59	05/01/2000 0:00:00	600000111	
+
+
+1	dni	10000001A	Admin	Admin	admin@admin.com	Adm1n	Admin	19/08/2025 11:26:58	NULL	11/04/1990 0:00:00	600000001	
+2	dni	10000002A	Usuario2	Apellido2	usuario2@mail.com	Passw0rd!2	Client	19/08/2025 11:26:58	04/09/2025 11:13:24	20/07/1990 0:00:00	600000002	
+3	dni	10000003A	Usuario3	Apellido3	usuario3@mail.com	Passw0rd!3	Client	19/08/2025 11:26:58	NULL	28/10/1990 0:00:00	600000003	
+4	dni	10000004A	Usuario4	Apellido4	usuario4@mail.com	Passw0rd!4	Client	19/08/2025 11:26:58	NULL	05/02/1991 0:00:00	600000004	
+5	dni	10000005A	Usuario5	Apellido5	usuario5@mail.com	Passw0rd!5	Client	19/08/2025 11:26:58	04/09/2025 11:13:58	16/05/1991 0:00:00	600000005	
+6	dni	10000006A	Usuario6	Apellido6	usuario6@mail.com	Passw0rd!6	Client	19/08/2025 11:26:58	NULL	24/08/1991 0:00:00	600000006	
+7	dni	10000007A	Usuario7	Apellido7	usuario7@mail.com	Passw0rd!7	Client	19/08/2025 11:26:58	NULL	02/12/1991 0:00:00	600000007	
+8	dni	10000008A	Usuario8	Apellido8	usuario8@mail.com	Passw0rd!8	Client	19/08/2025 11:26:58	NULL	11/03/1992 0:00:00	600000008	
+9	dni	10000009A	Usuario9	Apellido9	usuario9@mail.com	Passw0rd!9	Client	19/08/2025 11:26:58	NULL	19/06/1992 0:00:00	600000009	
+10	dni	10000010A	Usuario10	Apellido10	usuario10@mail.com	Passw0rd!10	Client	19/08/2025 11:26:58	NULL	27/09/1992 0:00:00	600000010	
+11	NIE	10000011B	Users11	Apellidos11	usuarios11@mail.com	Passw0rd!11111	Client	19/08/2025 11:26:58	10/09/2025 8:17:59	05/01/2000 0:00:00	600000111	
+12	dni	10000012A	Usuario12	Apellido12	usuario12@mail.com	Passw0rd!12	Client	19/08/2025 11:26:58	NULL	15/04/1993 0:00:00	600000012	
+13	dni	10000013A	Usuario13	Apellido13	usuario13@mail.com	Passw0rd!13	Client	19/08/2025 11:26:58	NULL	24/07/1993 0:00:00	600000013	
+14	dni	10000014A	Usuario14	Apellido14	usuario14@mail.com	Passw0rd!14	Client	19/08/2025 11:26:58	NULL	01/11/1993 0:00:00	600000014	
+15	dni	10000015A	Usuario15	Apellido15	usuario15@mail.com	Passw0rd!15	Client	19/08/2025 11:26:58	NULL	09/02/1994 0:00:00	600000015	
+21	Nie	Y1234567X	Prueba01	Apellido01	prueba01@prueba01.com	prueba01	Client	26/08/2025 8:20:57	NULL	26/08/2000 8:17:53	123456789	
+23	dni	62974351V	Prueba	Prueba	usuarioprueba@usuario.com	Aa12345678-	Client	03/09/2025 11:39:07	NULL	02/05/2001 0:00:00	976543218	
+37	DNI	10000020a	NameVeinte	ApellVeinte	usuarios20@mail.com	Passw0rd!20	Client	05/09/2025 12:29:01	NULL	05/09/2000 12:10:17	600000020	A
+38	DNI	10000011B	FDGSDFGSDFG	strFDGSFGSDFGing	usuario20@mail.com	Passw0rd!20	Client	05/09/2025 12:33:19	NULL	05/09/2000 12:32:06	600000020	A
